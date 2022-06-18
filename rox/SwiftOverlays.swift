@@ -463,7 +463,7 @@ public class SwiftOverlays: NSObject {
         }
     }
     
-    public class func closeAnnoyingNotificationOnTopOfStatusBar(sender: AnyObject) {
+    @objc public class func closeAnnoyingNotificationOnTopOfStatusBar(sender: AnyObject) {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
         
         var notificationView: UIView?
@@ -490,7 +490,7 @@ public class SwiftOverlays: NSObject {
     // MARK: - Private class methods -
     
     private class func labelForText(text: NSString) -> UILabel {
-        let textSize = text.size(attributes: [NSFontAttributeName: font])
+        let textSize = text.size(withAttributes: [NSAttributedStringKey.font: font])
         
         let labelRect = CGRect(x: 0.0, y: 0.0, width: textSize.width, height: textSize.height)
         

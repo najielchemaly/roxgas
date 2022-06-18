@@ -153,7 +153,7 @@ class RefillViewController: BaseViewController, UIPickerViewDelegate {
         self.textFieldPaymentMethod.inputAccessoryView = toolbar
     }
     
-    func doneButtonTapped() {
+    @objc func doneButtonTapped() {
         if textFieldDeliveryDate.isFirstResponder {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"

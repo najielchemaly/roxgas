@@ -204,7 +204,7 @@ class POSViewController: BaseViewController, UITableViewDelegate, UITableViewDat
         return UITableViewCell()
     }
     
-    func didSelectRow(sender: UITapGestureRecognizer) {
+    @objc func didSelectRow(sender: UITapGestureRecognizer) {
         if let view = sender.view {
             let row = view.tag
             let indexPath = IndexPath.init(row: row, section: 0)
@@ -223,7 +223,7 @@ class POSViewController: BaseViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func buttonGetLocationTapped(sender: UIButton) {
+    @objc func buttonGetLocationTapped(sender: UIButton) {
         let row = sender.tag
         let pos = DatabaseObjects.pointsOfSale[row]
         if let location = pos.location {

@@ -177,7 +177,7 @@ class SignupViewController: BaseViewController, UIPickerViewDelegate, UITextFiel
         self.textFieldProvince.inputAccessoryView = toolbar
     }
     
-    func doneButtonTapped() {
+    @objc func doneButtonTapped() {
         if DatabaseObjects.provinces.count > 0 {
             let row = self.pickerView.selectedRow(inComponent: 0)
             let province = DatabaseObjects.provinces[row]

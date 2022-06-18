@@ -314,7 +314,7 @@ class PurchaseViewController: BaseViewController, UITableViewDelegate, UITableVi
         self.textFieldPaymentMethod.inputAccessoryView = toolbar
     }
     
-    func doneButtonTapped() {
+    @objc func doneButtonTapped() {
         if textFieldDeliveryDate.isFirstResponder {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -408,7 +408,7 @@ class PurchaseViewController: BaseViewController, UITableViewDelegate, UITableVi
         self.selectedPickerViewRow = row
     }
     
-    func buttonIncreaseQtyTapped(sender: UIButton) {
+    @objc func buttonIncreaseQtyTapped(sender: UIButton) {
         let row = sender.tag
         if let cell = tableView.cellForRow(at: IndexPath.init(row: row, section: 0)) as? ProductTableViewCell {
             var productQty = 0
@@ -429,7 +429,7 @@ class PurchaseViewController: BaseViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func buttonDecreaseQtyTapped(sender: UIButton) {
+    @objc func buttonDecreaseQtyTapped(sender: UIButton) {
         let row = sender.tag
         if let cell = tableView.cellForRow(at: IndexPath.init(row: row, section: 0)) as? ProductTableViewCell {
             var productQty = 0

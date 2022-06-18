@@ -83,7 +83,7 @@ class NotificationsViewController: BaseViewController, UITableViewDelegate, UITa
         return UITableViewCell()
     }
 
-    func handleRefresh() {
+    @objc func handleRefresh() {
         self.getNotifications(isRefreshing: true)
     }
     

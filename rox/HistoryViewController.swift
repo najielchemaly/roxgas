@@ -115,7 +115,7 @@ class HistoryViewController: BaseViewController, UITableViewDelegate, UITableVie
         self.refreshControl.addTarget(self, action: #selector(handleRefresh), for: UIControlEvents.valueChanged)
     }
     
-    func handleRefresh() {
+    @objc func handleRefresh() {
         self.getHistory(isRefreshing: true)
     }
     
@@ -259,7 +259,7 @@ class HistoryViewController: BaseViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func doneButtonTapped() {
+    @objc func doneButtonTapped() {
         if pickerHistory.count > 0 {
             let row = self.pickerView.selectedRow(inComponent: 0)
             let history = pickerHistory[row]
